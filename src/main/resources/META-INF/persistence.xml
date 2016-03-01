@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="MedicFastPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>com.medicfast.model.Medicamento</class>
+        <class>com.medicfast.model.PontoAtendimento</class>
+        <class>com.medicfast.model.Especialidade</class>
+        <class>com.medicfast.model.Medico</class>
+        <class>com.medicfast.model.Senha</class>
+        <class>com.medicfast.model.Usuario</class>
+        <class>com.medicfast.model.TipoOcorrencia</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/MedicFast"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.password" value="postgres"/>
+            <property name="eclipselink.ddl-generation" value="none"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+    </persistence-unit>
+</persistence>
